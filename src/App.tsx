@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from "./Header";
+import styled from "styled-components";
+import Infomation from "./Infomation";
+import Footer from "./Footer";
+
+const MainImage = styled.div`
+widht: 100%;
+height: 300px;
+    background-color: rgba(211,211,211,0.5);
+    text-align: center;
+font-family: 'Dancing Script', cursive;
+font-size: 3rem;
+align-items: center;
+display: flex;
+justify-content: center;
+ `;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <Header/>
+        <MainImage>
+          Velkommen til bryllupet vårt!
+         </MainImage>
+        <Infomation/>
+        <MainImage>
+            Overnatting
+        </MainImage>
+        <MainImage>
+           RSVP
+        </MainImage>
+        <Footer/>
+    </>
   );
 }
 
