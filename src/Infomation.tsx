@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {ReactComponent as Wedding} from "./icons/wedding.svg";
 import {ReactComponent as Party} from "./icons/party.svg";
 import {ReactComponent as Rings} from "./icons/rings.svg";
+import styles from "./styles";
 
 
 
@@ -29,7 +30,7 @@ const StyledSection = styled.section`
 `;
 
 const Wrapper = styled.div`
-    background-color: rgba(211,211,211,0.2);
+    background-color: ${styles.main.colors.background.fluffyWhite};
     padding: 2rem;
 
 `;
@@ -39,6 +40,8 @@ const Heading = styled.div`
     font-family: 'Quicksand', sans-serif;
     font-size: 2rem;
     padding: 3rem 0rem 2rem 0rem;
+        color: ${styles.main.colors.background.text};
+
 
 `;
 
@@ -47,12 +50,14 @@ const Title = styled.div`
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5rem;
     margin-top: 0.5rem;
+    color: ${styles.main.colors.background.text};
 `;
 
 const Description = styled.p`
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 1rem;
+    color: ${styles.main.colors.background.text};
 
 `;
 
@@ -97,7 +102,7 @@ export default function Infomation() {
             <Heading>Seremoni og feiring</Heading>
             <StyledTop>
                 <InfomationComponent title={"Vår bryllupsdag"} time={"Lørdag 24 juni 2023"} description={"Her kommer det en litt lengre tekst om hvor man skal møte opp og viktig info"} icon={<RingIcon/>}/>
-                <InfomationComponent title={"Sermoni"} time={"Oppmøte kl 13:00"} description={"Her kommer det en litt lengre tekst om hvor man skal møte opp og viktig info"} icon={<ChurchIcon/>}/>
+                <InfomationComponent title={"Seremoni"} time={"Oppmøte kl 13:00"} description={"Her kommer det en litt lengre tekst om hvor man skal møte opp og viktig info"} icon={<ChurchIcon/>}/>
                 <InfomationComponent title={"Middag"} time={"Skåtøy Kafe klokken 17:00"} description={"Her kommer det en litt lengre tekst om hvor man skal møte opp og viktig info"} icon={<PartyIcon/>}/>
             </StyledTop>
         </Wrapper>

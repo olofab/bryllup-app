@@ -8,6 +8,7 @@ const StyledFooter = styled.footer`
     font-family: 'Quicksand', sans-serif;
     font-size: 1rem;
     text-align: center;
+
 `;
 export default function Footer() {
     return (

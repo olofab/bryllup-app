@@ -4,11 +4,14 @@ import Header from "./Header";
 import styled from "styled-components";
 import Infomation from "./Infomation";
 import Footer from "./Footer";
+import Overnatting from "./Overnatting";
+import RSVP from "./RSVP";
+import styles from "./styles";
 
 const MainImage = styled.div`
 widht: 100%;
 height: 300px;
-    background-color: rgba(211,211,211,0.5);
+    background-color: ${styles.main.colors.background.linen80};
     text-align: center;
 font-family: 'Dancing Script', cursive;
 font-size: 3rem;
@@ -22,15 +25,11 @@ function App() {
     <>
         <Header/>
         <MainImage>
-          Velkommen til bryllupet vårt!
+          Vi ønsker å dele det beste øyeblikket med deg!
          </MainImage>
         <Infomation/>
-        <MainImage>
-            Overnatting
-        </MainImage>
-        <MainImage>
-           RSVP
-        </MainImage>
+        <Overnatting/>
+        <RSVP/>
         <Footer/>
     </>
   );
