@@ -28,7 +28,7 @@ export default function RSVP() {
     return (
         <StyledArticle>
             <LetterIcon/>
-            <Title>RSVP</Title>
+            <Title>Registrering</Title>
             <p>For å få oversikt over hvem som kommer ønsker vi å høre fra deg før 1. april 2023</p>
         </StyledArticle>
 

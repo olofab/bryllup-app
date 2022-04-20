@@ -30,6 +30,12 @@ function App() {
         <Infomation/>
         <Overnatting/>
         <RSVP/>
+        <MainImage>
+            Program
+        </MainImage>
+        <MainImage>
+            FAQ
+        </MainImage>
         <Footer/>
     </>
   );
