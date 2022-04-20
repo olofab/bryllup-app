@@ -7,6 +7,9 @@ import Footer from "./Footer";
 import Overnatting from "./Overnatting";
 import RSVP from "./RSVP";
 import styles from "./styles";
+import FAQ from "./FAQ";
+import TheWedding from "./TheWedding";
+import {ChakraProvider} from "@chakra-ui/react";
 
 const MainImage = styled.div`
 widht: 100%;
@@ -22,23 +25,24 @@ justify-content: center;
 
 function App() {
   return (
-    <>
-        <Header/>
+      <ChakraProvider>
+
+      <Header/>
         <MainImage>
           Vi ønsker å dele det beste øyeblikket med deg!
          </MainImage>
+        <TheWedding/>
         <Infomation/>
         <Overnatting/>
         <RSVP/>
         <MainImage>
             Program
         </MainImage>
-        <MainImage>
-            FAQ
-        </MainImage>
+        <FAQ/>
         <Footer/>
-    </>
-  );
+      </ChakraProvider>
+
+          );
 }
 
 export default App;
