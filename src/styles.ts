@@ -10,7 +10,8 @@ export default {
                 sky: "#D4DDE3",
                 ultraGrey: "#FCF8F7",
                 text: "#333333",
-                olive: "#9BA59C",
+                olive: "#9BA59C50",
+                hover: "#9BA59C",
                 linen80: "#F7EBDB80",
                 mushroom: "#F0E1CD"
             },

@@ -25,9 +25,9 @@ function daysUntilWedding(){
 export default function Header() {
     return (
         <StyledTop>
-            <div>
+                <div>
                 Anne Karoline + Philip
-            </div>
+                </div>
             <div>
                 {daysUntilWedding()} dager
             </div>

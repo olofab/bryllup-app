@@ -3,8 +3,9 @@ import './App.css';
 import styled from 'styled-components';
 import {ReactComponent as Wedding} from "./icons/wedding.svg";
 import {ReactComponent as Party} from "./icons/party.svg";
-import {ReactComponent as Rings} from "./icons/rings.svg";
+import {ReactComponent as Rings} from "./icons/rings2.svg";
 import styles from "./styles";
+import {TitleWithUnderline} from "./Components/Title";
 
 
 
@@ -24,24 +25,12 @@ const StyledSection = styled.section`
     flex-direction: column;
     align-items: center;
     flex-grow:1;
-    
- 
-
+    margin: 0rem 1rem 0rem 1rem;
 `;
 
 const Wrapper = styled.div`
     background-color: ${styles.main.colors.background.fluffyWhite};
     padding: 2rem;
-
-`;
-
-const Heading = styled.div`
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2rem;
-    padding: 3rem 0rem 2rem 0rem;
-        color: ${styles.main.colors.background.text};
-
 
 `;
 
@@ -69,19 +58,18 @@ interface Props {
 }
 
 const ChurchIcon = styled(Wedding)`
-    height: 20%;
-    width: 20%;
+    height: 60px;
+    width: 60px;
 `;
 
 const PartyIcon = styled(Party)`
-    height: 20%;
-    width: 20%;
+    height: 60px;
+    width: 60px;
 `;
 
 const RingIcon = styled(Rings)`
-    color: black;
-    height: 20%;
-    width: 20%;
+    height: 60px;
+    width: 60px;
 `;
 
 
@@ -99,7 +87,7 @@ const InfomationComponent = (props : Props) => {
 export default function Infomation() {
     return (
         <Wrapper>
-            <Heading>Seremoni og feiring</Heading>
+            <TitleWithUnderline  title={"Seremoni og feiring"}/>
             <StyledTop>
                 <InfomationComponent title={"Vår bryllupsdag"} time={"Lørdag 24 juni 2023"} description={"Her kommer det en litt lengre tekst om hvor man skal møte opp og viktig info"} icon={<RingIcon/>}/>
                 <InfomationComponent title={"Seremoni"} time={"Oppmøte kl 13:00"} description={"Her kommer det en litt lengre tekst om hvor man skal møte opp og viktig info"} icon={<ChurchIcon/>}/>

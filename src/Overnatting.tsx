@@ -3,6 +3,7 @@ import './App.css';
 import styled from 'styled-components';
 import {ReactComponent as Hotel} from "./icons/hotel.svg";
 import styles from "./styles";
+import {TitleWithUnderline} from "./Components/Title";
 
 
 const StyledArticle = styled.article`
@@ -14,16 +15,8 @@ const StyledArticle = styled.article`
 
 `;
 
-const Title = styled.div`
-    margin: 1rem;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.5rem;
-    text-align: center;
-    color: ${styles.main.colors.background.text};
-`;
-
-
 const HotelIcon = styled(Hotel)`
+    margin: auto;
     height: 60px;
     width: 60px;
 `;
@@ -31,7 +24,7 @@ export default function Overnatting() {
     return (
         <StyledArticle>
             <HotelIcon/>
-            <Title>Overnatting</Title>
+            <TitleWithUnderline  title={"Overnatting"}/>
             <p>Her kommer det info om hotel og overnatting</p>
         </StyledArticle>
 
