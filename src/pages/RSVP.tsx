@@ -30,10 +30,16 @@ const StyledArticle = styled.article`
 const WhiteBox = styled.div`
     max-width: 48em;
     background-color: #fff;
-    padding: 6em 2em;    margin: 3rem;
+    padding: 6em 2em;    
+    margin: 3rem;
     height: 100%;
     border:1px #6a98bc solid;
     
+     @media(max-width: 800px) {
+        font-size: 1.2rem;
+        max-width: 18em;
+        
+    }
 `;
 
 const StyledButton = chakra(Button, {
@@ -48,7 +54,7 @@ export default function RSVP() {
     return (
         <StyledArticle>
             <WhiteBox>
-                <TitleWithUnderline  title={"Registrering"}/>
+                <TitleWithUnderline  title={"Påmelding"}/>
 
                 <TextField>For å få oversikt over hvem som kommer ønsker vi å høre fra deg før 1. april 2023</TextField>
                 <StyledButton>Klikk her for å registrere deg</StyledButton>

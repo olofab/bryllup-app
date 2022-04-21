@@ -17,6 +17,10 @@ const StyledHeader = styled.header`
     top: 0;
     background-color: white;
     align-items: center;
+    
+     @media(max-width: 800px) {
+        font-size: 1.2rem;
+    }
 `;
 
 export default function Header() {

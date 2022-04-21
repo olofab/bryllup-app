@@ -4,12 +4,16 @@ import {ReactComponent as Flower} from "../icons/flower.svg";
 import styles from "../styling/styles";
 
 const Title = styled.div`
-    margin: 1rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
     font-family: 'Gilda Display', serif;
     font-size: 3rem;
     text-align: center;
         text-transform: uppercase;
     color: ${styles.main.colors.background.text};
+    
+     @media(max-width: 800px) {
+        font-size: 2.5rem;
+    }
 `;
 
 interface TitleProps {

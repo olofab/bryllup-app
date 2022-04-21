@@ -20,7 +20,7 @@ const Hero = styled.div`
     background-color: #f9ad81;
     color: ${theme.main.colors.background.fluffyWhite};
     text-align: center;
-
+    
     
 `;
 
@@ -28,19 +28,30 @@ const Undertittel = styled.div`
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .2em;
+    
+     @media(max-width: 800px) {
+        font-size: 1.2rem;
+    }
 `;
 
 const Scroll = styled.div`
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: .2em;
+    
+     @media(max-width: 800px) {
+        font-size: 1.2rem;
+    }
 `;
 const Hovedtittel = styled.div`
 font-family: 'Gilda Display', serif;
 font-size: 8rem;
 text-transform: lowercase;
 letter-spacing: 0;
-
+ @media(max-width: 800px) {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
 `;
 
 const SiteTitle = styled.div`
