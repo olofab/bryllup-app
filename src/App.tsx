@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
-import Header from "./Header";
+import Header from "./pages/Header";
 import styled from "styled-components";
-import Infomation from "./Infomation";
-import Footer from "./Footer";
-import Overnatting from "./Overnatting";
-import RSVP from "./RSVP";
-import styles from "./styles";
-import FAQ from "./FAQ";
-import TheWedding from "./TheWedding";
+import Infomation from "./pages/Infomation";
+import Footer from "./pages/Footer";
+import Overnatting from "./pages/Overnatting";
+import RSVP from "./pages/RSVP";
+import styles from "./styling/styles";
+import FAQ from "./pages/FAQ";
+import TheWedding from "./pages/TheWedding";
 import {ChakraProvider} from "@chakra-ui/react";
+import MainPage from "./pages/MainPage";
+import Schedule from "./pages/Schedule";
 
 const MainImage = styled.div`
-widht: 100%;
-height: 300px;
     background-color: ${styles.main.colors.background.linen80};
     text-align: center;
 font-family: 'Dancing Script', cursive;
@@ -27,17 +27,13 @@ function App() {
   return (
       <ChakraProvider>
 
-      <Header/>
-        <MainImage>
-          Vi ønsker å dele det beste øyeblikket med deg!
-         </MainImage>
-        <TheWedding/>
+        <Header/>
+        <MainPage/>
         <Infomation/>
+        <TheWedding/>
         <Overnatting/>
         <RSVP/>
-        <MainImage>
-            Program
-        </MainImage>
+       <Schedule/>
         <FAQ/>
         <Footer/>
       </ChakraProvider>

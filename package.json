@@ -12,8 +12,6 @@
     "@chakra-ui/theme": "^1.14.1",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@fremtind/jkl-accordion-react": "^6.0.12",
-    "@fremtind/jkl-text-input-react": "^9.0.16",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
