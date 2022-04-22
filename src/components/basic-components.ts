@@ -22,13 +22,41 @@ export const Underline = styled.span`
    
 `;
 
+export const UnderlineGold = styled.span`
+    display: block;
+    width: 60px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #b18f3a;
+   
+`;
+
 export const RowCenter = styled.div`
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
    
     @media(max-width: 800px) {
-       display: flex;
        flex-direction: column;
     }
+`;
+
+export const ColumnCenter = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   max-width: 50%;
+   margin 0 auto;
+   
+    @media(max-width: 800px) {
+       flex-direction: column;
+          max-width: 100%;
+
+    }
+`;
+
+export const Adress = styled.p`
+   margin-bottom: 1rem;
+   text-align: center;
 `;

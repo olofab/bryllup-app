@@ -2,10 +2,9 @@ import React, {ReactComponentElement} from 'react';
 import '../App.css';
 import styled from 'styled-components';
 import styles from "../styling/styles";
-import {TitleWithUnderline} from "../components/Title";
+import { infomation } from "../content/infomation";
 import {ChurchIcon, PartyIcon, RingIcon } from '../styling/icons';
-import { Underline } from '../components/basic-components';
-import {loremipsum} from "./TheWedding";
+import {Adress, Underline } from '../components/basic-components';
 
 
 
@@ -13,7 +12,6 @@ const StyledTop = styled.article`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Gilda Display', serif;
     font-size: 1rem;
        
    
@@ -23,23 +21,29 @@ const StyledSection = styled.section`
     flex-direction: column;
     align-items: center;
     flex-grow:1;
+    margin: 2rem;
+    
 `;
 
 const Wrapper = styled.div`
     background-color: ${styles.main.colors.background.fluffyWhite};
+        font-family: 'Quicksand', sans-serif;
+
     padding: 4rem;
     min-height: 70vh;
         display: flex;
     justify-content: center;
     align-items: center;
-
-    
-
 `;
 
 const RowOne = styled.div`
-    display: block;
-    margin: 3rem 0rem 3rem 0rem;
+    padding-bottom: 2rem;
+    margin: auto;
+    max-width: 50%;
+    
+     @media(max-width: 800px) {
+        max-width: 100%;
+    }
     
 `;
 
@@ -47,7 +51,7 @@ const RowTwo = styled.div`
        display: flex;
         justify-content: center;
         flex-direction: row;
-    margin: 3rem 0rem 3rem 0rem;
+    margin: 0rem 0rem 3rem 0rem;
 
  @media(max-width: 800px) {
         display: flex;
@@ -75,9 +79,12 @@ const Description = styled.p`
 
 `;
 
+
+
 interface Props {
     title: string;
     time?: string;
+    adress?: string;
     description: string;
     icon: ReactComponentElement<any>;
 }
@@ -92,6 +99,7 @@ const InfomationComponent = (props : Props) => {
             <Title>{props.title}</Title>
             <Underline/>
             <Description>{props.time}</Description>
+            <Adress>{props.adress}</Adress>
             <Description>{props.description}</Description>
         </StyledSection>
     )
@@ -99,15 +107,19 @@ const InfomationComponent = (props : Props) => {
 
 
 export default function Infomation() {
+    const ourday = infomation.theday;
+    const cerimony = infomation.cerimony;
+    const party = infomation.party;
+
     return (
         <Wrapper>
             <StyledTop>
                 <RowOne>
-                    <InfomationComponent title={"Vår bryllupsdag"} time={"Lørdag 24 juni 2023"} description={loremipsum} icon={<RingIcon/>}/>
+                    <InfomationComponent title={"Vår bryllupsdag"} time={ourday.date} description={ourday.description} icon={<RingIcon/>}/>
                 </RowOne>
                 <RowTwo>
-                    <InfomationComponent title={"Seremoni"} time={"Oppmøte kl 13:00"} description={loremipsum} icon={<ChurchIcon/>}/>
-                    <InfomationComponent title={"Middag"} time={"Skåtøy Kafe klokken 17:00"} description={loremipsum} icon={<PartyIcon/>}/>
+                    <InfomationComponent title={"Seremoni"} time={cerimony.date} adress={cerimony.adress} description={cerimony.description} icon={<ChurchIcon/>}/>
+                    <InfomationComponent title={"Middag"} time={party.date} adress={party.adress} description={party.description} icon={<PartyIcon/>}/>
                 </RowTwo>
             </StyledTop>
         </Wrapper>

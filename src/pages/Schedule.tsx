@@ -3,8 +3,8 @@ import '../App.css';
 import styled from 'styled-components';
 import styles from "../styling/styles";
 import {TitleWithUnderline} from "../components/Title";
-import {RowCenter, TextField, Underline} from '../components/basic-components';
-import {loremipsum} from "./TheWedding";
+import { TextField, Underline} from '../components/basic-components';
+import { program } from "../content/program";
 
 
 const StyledArticle = styled.article`
@@ -18,6 +18,11 @@ const StyledArticle = styled.article`
     text-align: center;
     background-color: ${styles.main.colors.background.linen80};
     min-height: 60vh;
+    
+        @media(max-width: 800px) {
+           padding: 3rem;
+
+    }
 
 `;
 
@@ -27,8 +32,8 @@ const DayLabels = styled.ul`
     justify-content: space-between;
     list-style-type: none;
      @media(max-width: 800px) {
-        display: flex;
         flex-direction: column;
+        width: 100%
     }
 `;
 
@@ -36,12 +41,18 @@ const Days = styled.li`
     letter-spacing: .2em;
     font-size: 1.5rem;
     text-transform: uppercase;
+    
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin: 1rem;
+    color: #b18f3a;
 `;
 
 const Day = styled.div`
     display: flex;
     flex-direction: column;
-       margin-bottom: 2rem;
+    margin-bottom: 2rem;
 
     align-items: center;
 `;
@@ -54,30 +65,30 @@ export default function Schedule() {
             <DayLabels>
                 <Day>
                 <Days>
-                    Fredag
+                    {program.friday.day}
                 </Days>
                     <Underline/>
                 <TextField>
-                    {loremipsum}
+                    {program.friday.description}
                 </TextField>
 
                 </Day>
                 <Day>
                 <Days>
-                    Lørdag
+                    {program.saturday.day}
                 </Days>
                     <Underline/>
                 <TextField>
-                    {loremipsum}
+                    {program.saturday.description}
                 </TextField>
             </Day>
                 <Day>
             <Days>
-                Søndag
+                {program.sunday.day}
             </Days>
                     <Underline/>
             <TextField>
-                {loremipsum}
+                {program.sunday.description}
             </TextField>
 
         </Day>

@@ -10,6 +10,7 @@ import {
     AccordionPanel,
     AccordionIcon, Box,
 } from '@chakra-ui/react'
+import { faq } from "../content/faq";
 
 const StyledArticle = styled.article`
     display: flex;
@@ -33,42 +34,26 @@ padding 2rem;
 export default function FAQ() {
     return (
         <StyledArticle>
-            <TitleWithUnderline  title={"Frequently asked question"}/>
+            <TitleWithUnderline  title={"Ofte stilte spørsmål"}/>
             <Questions>
             <Accordion allowMultiple>
-            <AccordionItem>
-                <h2>
-                    <AccordionButton>
-                        <Box flex='1' textAlign='left'>
-                            Hva er dresscode for de forskjellige dagene?
-                        </Box>
-                        <AccordionIcon />
-                    </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                </AccordionPanel>
-            </AccordionItem>
-
-            <AccordionItem>
-                <h2>
-                    <AccordionButton>
-                        <Box flex='1' textAlign='left'>
-                            Kan man ha med barn?
-                        </Box>
-                        <AccordionIcon />
-                    </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                </AccordionPanel>
-            </AccordionItem>
+                {
+                    faq.questions.map((item) => (
+                        <AccordionItem>
+                            <h2>
+                                <AccordionButton>
+                                    <Box flex='1' textAlign='left'>
+                                        {item.question}
+                                    </Box>
+                                    <AccordionIcon />
+                                </AccordionButton>
+                            </h2>
+                            <AccordionPanel pb={4}>
+                                {item.answer}
+                            </AccordionPanel>
+                        </AccordionItem>
+                    ))
+                }
         </Accordion>
             </Questions>
 

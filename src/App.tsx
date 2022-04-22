@@ -30,8 +30,8 @@ function App() {
         <Header/>
         <MainPage/>
         <Infomation/>
-        <TheWedding/>
         <Overnatting/>
+        <TheWedding/>
         <RSVP/>
        <Schedule/>
         <FAQ/>

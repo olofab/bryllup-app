@@ -56,8 +56,9 @@ export default function RSVP() {
             <WhiteBox>
                 <TitleWithUnderline  title={"Påmelding"}/>
 
-                <TextField>For å få oversikt over hvem som kommer ønsker vi å høre fra deg før 1. april 2023</TextField>
-                <StyledButton>Klikk her for å registrere deg</StyledButton>
+                <TextField>Den beste gaven du kan gi oss er at vi får feire vår dag med deg. For å gjøre helgen til den beste mulige trenger vi å vite om du kommer. </TextField>
+                <TextField>Frist for påmelding er 1. januar 2000.</TextField>
+                <StyledButton disabled>Klikk her for å registrere deg</StyledButton>
             </WhiteBox>
 
         </StyledArticle>
