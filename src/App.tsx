@@ -12,6 +12,7 @@ import TheWedding from "./pages/TheWedding";
 import {ChakraProvider} from "@chakra-ui/react";
 import MainPage from "./pages/MainPage";
 import Schedule from "./pages/Schedule";
+import Loading from "./pages/Loading";
 
 const MainImage = styled.div`
     background-color: ${styles.main.colors.background.linen80};
@@ -23,19 +24,27 @@ display: flex;
 justify-content: center;
  `;
 
+function FerdigNettside(){
+    return (
+        <ChakraProvider>
+            <Loading/>
+            <Header/>
+            <MainPage/>
+            <Infomation/>
+            <Overnatting/>
+            <TheWedding/>
+            <RSVP/>
+            <Schedule/>
+            <FAQ/>
+            <Footer/>
+        </ChakraProvider>
+    )
+}
+
 function App() {
   return (
       <ChakraProvider>
-
-        <Header/>
-        <MainPage/>
-        <Infomation/>
-        <Overnatting/>
-        <TheWedding/>
-        <RSVP/>
-       <Schedule/>
-        <FAQ/>
-        <Footer/>
+        <Loading/>
       </ChakraProvider>
 
           );

@@ -17,7 +17,7 @@ const Hero = styled.div`
     height: 50rem;
     width: 100%;
     background-image: url("https://s3.amazonaws.com/ameliaandsteveassets/topo.svg");
-    background-color: #f9ad81;
+    background-color: #f9ad8190;
     color: ${theme.main.colors.background.fluffyWhite};
     text-align: center;
     

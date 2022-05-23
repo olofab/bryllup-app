@@ -9,6 +9,7 @@ import {ReactComponent as Party} from "../icons/party.svg";
 import {ReactComponent as Rings} from "../icons/rings2.svg";
 import {ReactComponent as Scroll} from "../icons/arrow.svg";
 import {ReactComponent as Suitcase} from "../icons/suitcase.svg";
+
 import theme from '../styling/styles';
 
 
@@ -27,6 +28,7 @@ export const PersonIcon = styled(Person)`
     height: 60px;
     width: 60px;
 `;
+
 
 export const SuitcaseIcon = styled(Suitcase)`
     margin: 0 auto;
